@@ -23,8 +23,8 @@ from medicalrecords.views import MedicalRecordViewSet
 
 router=routers.DefaultRouter()
 router.register(r'doctors', DoctorViewSet)
-router.register(r'patients', PatientViewSet)
-router.register(r'medicalrecords', MedicalRecordViewSet)
+router.register(r'patients', PatientViewSet, basename="patients")
+router.register(r'medicalrecords', MedicalRecordViewSet, basename="medicalrecords")
 
 urlpatterns = [
     path('', include(router.urls)),

@@ -4,4 +4,4 @@ from rest_framework import serializers
 class DoctorSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model=Doctor
-        fields='__all__'
+        fields=("name","license","id")

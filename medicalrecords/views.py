@@ -7,9 +7,17 @@ class MedicalRecordViewSet(viewsets.ModelViewSet):
     serializer_class=MedicalRecordSerializer
     permission_classes=[permissions.AllowAny]
     
-    def get_queryset(self):
-        queryset=MedicalRecord.objects.all()
-        return queryset
+    # def get_queryset(self):
+    #     queryset=MedicalRecord.objects.all()
+    #     patient = self.request.query_params.get('patientId', None)
+    #     if patient is not None:
+    #         queryset = queryset.filter(patientId=patient)
+    #     return queryset
+
+    
+    def get_medicalrecord(request):
+        print(request.query_params)
+        return Response({})
     
     def retrieve(self,request,pk=None):
         params = pk

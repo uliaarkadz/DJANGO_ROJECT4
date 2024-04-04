@@ -10,6 +10,13 @@ class PatientViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         queryset=Patient.objects.all()
         return queryset   
+    
+    # def get_queryset(self):
+    #     queryset=Patient.objects.all()
+    #     doctor = self.request.query_params.get('doctorId', None)
+    #     if doctor is not None:
+    #         queryset = queryset.filter(doctorId=doctor)
+    #     return queryset
 
     def retrieve(self,request,pk=None):
         params = pk

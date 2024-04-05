@@ -15,9 +15,10 @@ class MedicalRecordViewSet(viewsets.ModelViewSet):
     #     return queryset
 
     
-    def get_medicalrecord(request):
-        print(request.query_params)
-        return Response({})
+    def get_queryset(self):
+        queryset=MedicalRecord.objects.all()
+        return queryset   
+    
     
     def retrieve(self,request,pk=None):
         params = pk

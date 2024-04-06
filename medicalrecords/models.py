@@ -7,5 +7,4 @@ class MedicalRecord(models.Model):
     prescriptions=models.CharField(max_length=500)
     labWork=models.CharField(max_length=500)
     patientId=models.IntegerField()
-    doctorId=models.IntegerField()
     createdDate=models.DateTimeField(default=now())

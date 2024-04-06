@@ -9,3 +9,4 @@ class Patient(models.Model):
     gender=models.CharField(max_length=10)
     doctorId=models.IntegerField()
     createdDate=models.DateTimeField(default=now())
+    status=models.CharField(max_length=100, default='new')
